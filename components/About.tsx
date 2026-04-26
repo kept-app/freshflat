@@ -7,19 +7,19 @@ export default function About() {
             <span className="ff-rule" />About
           </p>
           <h2 className="font-display text-section font-normal">
-            Small on<br />
-            <span className="italic font-light text-sage-deep">purpose</span>.
+            Who we<br />
+            <span className="italic font-light text-sage-deep">are</span>.
           </h2>
         </div>
 
         <div>
           <p className="text-[14px] text-body leading-relaxed max-w-lg">
-            FreshFlat is an independent dispatch operator working with vetted Hong Kong cleaning crews. We started because we got tired of waiting four days for a property manager to send a quote. We focus on coordination, communication, and accountability — so the cleaners can focus on the work. We are small. We answer messages ourselves. We work with the same crews repeatedly because reputation matters more to us than any single job.
+            FreshFlat is a dispatch operator. We connect Hong Kong cleaning crews with customers who need them. We do not own equipment. We do not employ cleaners. We coordinate, communicate, and stand behind the work. The crews we send have been doing this for years. Our job is to make booking them as straightforward as it should have been all along.
           </p>
 
           <hr className="border-rule my-6" />
 
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <div>
               <p className="text-eyebrow tracking-eyebrow uppercase text-stone mb-1.5">Founded</p>
               <p className="font-display text-[16px]">2026</p>
@@ -27,10 +27,6 @@ export default function About() {
             <div>
               <p className="text-eyebrow tracking-eyebrow uppercase text-stone mb-1.5">Based in</p>
               <p className="font-display text-[16px]">Hong Kong</p>
-            </div>
-            <div>
-              <p className="text-eyebrow tracking-eyebrow uppercase text-stone mb-1.5">What we don&apos;t do</p>
-              <p className="font-display text-[16px]">Hide who we are</p>
             </div>
           </div>
         </div>
