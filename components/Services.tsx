@@ -1,8 +1,8 @@
 const services = [
-  { code: 'M-O', title: 'Move-out cleaning', desc: 'End-of-tenancy clean to landlord standard. Inside cabinets, behind appliances, oven, hood, every surface.' },
-  { code: 'A-T', title: 'Airbnb turnover', desc: 'Same-day turnovers between guests. Linen change, bathroom reset, kitchen wipe-down. Recurring schedules available.' },
-  { code: 'P-R', title: 'Post-renovation', desc: 'The hardest clean there is. Three-pass system: rough, detail, finish. Furniture-ready when we leave.' },
-  { code: 'D-C', title: 'Standard deep clean', desc: 'A reset for flats lived in. Top-to-bottom across every room, focused on the surfaces everyone misses.' },
+  { code: 'M-O', slug: 'move-out-clean', title: 'Move-out cleaning', desc: 'End-of-tenancy clean to landlord standard. Inside cabinets, behind appliances, oven, hood, every surface.' },
+  { code: 'A-T', slug: 'airbnb-turnover', title: 'Airbnb turnover', desc: 'Same-day turnovers between guests. Linen change, bathroom reset, kitchen wipe-down. Recurring schedules available.' },
+  { code: 'P-R', slug: 'post-renovation', title: 'Post-renovation', desc: 'The hardest clean there is. Three-pass system: rough, detail, finish. Furniture-ready when we leave.' },
+  { code: 'D-C', slug: 'standard-deep-clean', title: 'Standard deep clean', desc: 'A reset for flats lived in. Top-to-bottom across every room, focused on the surfaces everyone misses.' },
 ]
 
 export default function Services() {
@@ -24,7 +24,7 @@ export default function Services() {
               <span className="font-display text-[11px] tracking-[0.25em] text-sage uppercase mb-3">{s.code}</span>
               <h3 className="font-display text-[19px] md:text-[20px] font-normal mb-2.5">{s.title}</h3>
               <p className="text-[13px] text-body leading-relaxed flex-1">{s.desc}</p>
-              <a href="#booking" className="mt-4 text-[11px] tracking-btn uppercase text-sage-deep hover:text-sage transition-colors self-start border-b border-sage-deep/30 pb-0.5">
+              <a href={`?service=${s.slug}#booking`} className="mt-4 text-[11px] tracking-btn uppercase text-sage-deep hover:text-sage transition-colors self-start border-b border-sage-deep/30 pb-0.5">
                 Get a quote
               </a>
             </div>

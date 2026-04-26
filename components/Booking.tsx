@@ -1,10 +1,19 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const serviceOptions = ['Move-out clean', 'Airbnb turnover', 'Post-renovation', 'Standard deep clean']
 const sizeOptions = ['Studio / 1BR', '2BR', '3BR', '4BR+']
 const timeOptions = ['Within a week', '1 to 2 weeks', 'Flexible']
+const sqftOptions = ['Under 500 sq ft', '500–800 sq ft', '800–1,200 sq ft', 'Over 1,200 sq ft', 'Not sure']
+const districtOptions = ['Hong Kong Island', 'Kowloon', 'New Territories', 'Outlying islands']
+
+const serviceSlugMap: Record<string, string> = {
+  'move-out-clean': 'Move-out clean',
+  'airbnb-turnover': 'Airbnb turnover',
+  'post-renovation': 'Post-renovation',
+  'standard-deep-clean': 'Standard deep clean',
+}
 
 const isValidEmail = (val: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)
 
@@ -12,21 +21,40 @@ export default function Booking() {
   const [service, setService] = useState('')
   const [size, setSize] = useState('')
   const [timing, setTiming] = useState('')
+  const [sqft, setSqft] = useState('')
+  const [district, setDistrict] = useState('')
+  const [notes, setNotes] = useState('')
   const [email, setEmail] = useState('')
   const [emailTouched, setEmailTouched] = useState(false)
   const [sending, setSending] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState(false)
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const slug = params.get('service')
+    if (slug && serviceSlugMap[slug]) setService(serviceSlugMap[slug])
+  }, [])
+
   const emailValid = isValidEmail(email)
-  const canSubmit = service && size && timing && emailValid && !sending
+  const canSubmit = service && size && timing && sqft && district && emailValid && !sending
 
   const handleSubmit = async () => {
     if (!canSubmit) return
     setSending(true)
     setError(false)
 
-    const message = `New enquiry from the FreshFlat website.\n\nService: ${service}\nFlat size: ${size}\nTiming: ${timing}\nReply to: ${email}`
+    const messageLines = [
+      'New enquiry from the FreshFlat website.',
+      '',
+      `Service: ${service}`,
+      `Flat size: ${size}`,
+      `Approximate sq ft: ${sqft}`,
+      `District: ${district}`,
+      `Timing: ${timing}`,
+      ...(notes.trim() ? [`Notes: ${notes.trim()}`] : []),
+      `Reply to: ${email}`,
+    ]
 
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
@@ -34,13 +62,16 @@ export default function Booking() {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           access_key: '8049aa4d-8684-4da1-812f-5ce19e2fbefc',
-          subject: `FreshFlat Enquiry: ${service}, ${size}`,
+          subject: `FreshFlat Enquiry: ${service}, ${size}, ${district}`,
           from_name: 'FreshFlat Website',
           email,
           service,
           flat_size: size,
+          size_sqft: sqft,
+          district,
           timing,
-          message,
+          notes: notes.trim(),
+          message: messageLines.join('\n'),
         }),
       })
       const data = await res.json()
@@ -56,7 +87,7 @@ export default function Booking() {
     }
   }
 
-  const fallbackMailto = `mailto:freshflathk@gmail.com?subject=${encodeURIComponent(`FreshFlat Enquiry: ${service}, ${size}`)}&body=${encodeURIComponent(`Hi FreshFlat,\n\nI'd like to book the following:\n\nService: ${service}\nFlat size: ${size}\nTiming: ${timing}\nReply to: ${email}\n\nPlease get back to me with availability and a quote.\n\nThanks.`)}`
+  const fallbackMailto = `mailto:freshflathk@gmail.com?subject=${encodeURIComponent(`FreshFlat Enquiry: ${service}, ${size}, ${district}`)}&body=${encodeURIComponent(`Hi FreshFlat,\n\nI'd like to book the following:\n\nService: ${service}\nFlat size: ${size}\nApproximate sq ft: ${sqft}\nDistrict: ${district}\nTiming: ${timing}${notes.trim() ? `\nNotes: ${notes.trim()}` : ''}\nReply to: ${email}\n\nPlease get back to me with availability and a quote.\n\nThanks.`)}`
 
   return (
     <section id="booking" className="bg-graphite text-cream relative overflow-hidden reveal">
@@ -132,6 +163,50 @@ export default function Booking() {
                 <div className="mb-5">
                   <div className="flex items-baseline gap-3 mb-2.5">
                     <span className="font-display text-sage text-[13px]">04</span>
+                    <p className="font-display text-[15px]">How big is the flat, approximately?</p>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {sqftOptions.map(opt => (
+                      <button key={opt} onClick={() => setSqft(opt)}
+                        className={`px-3 py-1.5 text-[11px] border transition-colors ${sqft === opt ? 'bg-graphite text-cream border-graphite' : 'border-rule text-body hover:border-stone'}`}>
+                        {opt}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mb-5">
+                  <div className="flex items-baseline gap-3 mb-2.5">
+                    <span className="font-display text-sage text-[13px]">05</span>
+                    <p className="font-display text-[15px]">Where in Hong Kong is the flat?</p>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {districtOptions.map(opt => (
+                      <button key={opt} onClick={() => setDistrict(opt)}
+                        className={`px-3 py-1.5 text-[11px] border transition-colors ${district === opt ? 'bg-graphite text-cream border-graphite' : 'border-rule text-body hover:border-stone'}`}>
+                        {opt}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mb-5">
+                  <div className="flex items-baseline gap-3 mb-2.5">
+                    <span className="font-display text-sage text-[13px]">06</span>
+                    <p className="font-display text-[15px]">Anything we should know? <span className="text-stone font-sans text-[11px] font-normal normal-case tracking-normal">(optional)</span></p>
+                  </div>
+                  <textarea
+                    rows={3}
+                    value={notes}
+                    onChange={e => setNotes(e.target.value)}
+                    placeholder="e.g. very greasy kitchen, no goods lift, pets, smokers"
+                    className="w-full px-3 py-2 text-[12px] border border-rule bg-transparent outline-none transition-colors placeholder:text-stone focus:border-stone resize-none"
+                  />
+                </div>
+
+                <div className="mb-5">
+                  <div className="flex items-baseline gap-3 mb-2.5">
+                    <span className="font-display text-sage text-[13px]">07</span>
                     <p className="font-display text-[15px]">What email should we reply to?</p>
                   </div>
                   <input
