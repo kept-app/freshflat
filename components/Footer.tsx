@@ -4,10 +4,11 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-baseline gap-2.5 mb-3">
+            <div className="flex items-baseline gap-2.5 mb-2">
               <span className="font-display text-[22px] tracking-tight">FreshFlat</span>
               <span className="text-[9px] tracking-eyebrow uppercase text-stone">Hong Kong</span>
             </div>
+            <p className="font-display italic text-[13px] text-sage-deep mb-3">Hong Kong cleaning, made boring on purpose.</p>
             <p className="text-[12px] text-body leading-relaxed max-w-[240px]">
               Deep cleaning for Hong Kong flats. Vetted independent crews dispatched across the city.
             </p>
@@ -32,6 +33,7 @@ export default function Footer() {
             <div className="flex flex-col gap-1.5 text-[12px] text-body">
               <a href="#services" className="hover:text-graphite transition-colors">Services</a>
               <a href="#faq" className="hover:text-graphite transition-colors">FAQ</a>
+              <a href="#about" className="hover:text-graphite transition-colors">About</a>
               <a href="#booking" className="hover:text-graphite transition-colors">Get a quote</a>
             </div>
           </div>

@@ -14,7 +14,10 @@ export default function Hero() {
             <span className="italic font-light text-sage-deep">considered</span> for the way<br />
             Hong Kong lives.
           </h1>
-          <p className="mt-6 text-[15px] md:text-base leading-relaxed text-body max-w-lg">
+          <p className="mt-4 font-display text-[clamp(16px,2vw,21px)] font-normal text-graphite/60 leading-snug">
+            Quoted in hours, not days. Done to landlord standard.
+          </p>
+          <p className="mt-5 text-[15px] md:text-base leading-relaxed text-body max-w-lg">
             Move-out cleans, Airbnb turnovers, post-renovation deep cleans. We match you with vetted independent cleaners trusted by landlords and hosts across the city.
           </p>
           <div className="mt-7 flex flex-wrap gap-4 items-center">

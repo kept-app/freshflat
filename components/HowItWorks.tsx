@@ -7,7 +7,7 @@ const steps = [
   {
     num: '02',
     title: 'Receive an honest quote',
-    desc: 'We quote upfront based on what you tell us. No hidden fees, no surprises.',
+    desc: 'We quote upfront based on what you tell us. No hidden fees, no surprises. Quote back within the day, often within hours.',
   },
   {
     num: '03',

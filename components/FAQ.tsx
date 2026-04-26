@@ -27,6 +27,14 @@ const faqs = [
     q: 'Can I book a recurring schedule?',
     a: "Yes. Airbnb hosts and property managers often set up recurring turnovers. We can match you with the same crew each time for consistency.",
   },
+  {
+    q: 'Who runs FreshFlat?',
+    a: 'FreshFlat is an independent dispatch operator working with vetted HK cleaning crews. We focus on coordination, communication, and accountability so the cleaners can focus on the work. We are small. When you message us, you get a real person.',
+  },
+  {
+    q: 'What if I am not happy with the clean?',
+    a: 'Tell us within 24 hours and we will send the crew back to fix it at no cost. If we cannot make it right, we do not take payment. We work with the same cleaners repeatedly, so reputation matters more to us than any single job.',
+  },
 ]
 
 export default function FAQ() {

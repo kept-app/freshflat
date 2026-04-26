@@ -17,6 +17,7 @@ export default function Nav() {
           <a href="#services" className="hover:text-graphite transition-colors">Services</a>
           <a href="#how-it-works" className="hover:text-graphite transition-colors">How it works</a>
           <a href="#faq" className="hover:text-graphite transition-colors">FAQ</a>
+          <a href="#about" className="hover:text-graphite transition-colors">About</a>
           <a href="#booking" className="bg-graphite text-cream px-4 py-2 text-[10px] tracking-btn uppercase hover:bg-sage-deep transition-colors">
             Get a quote
           </a>
@@ -34,6 +35,7 @@ export default function Nav() {
           <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
           <a href="#how-it-works" onClick={() => setMenuOpen(false)}>How it works</a>
           <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#booking" onClick={() => setMenuOpen(false)} className="bg-graphite text-cream px-5 py-3 text-[11px] tracking-btn uppercase text-center mt-2">
             Get a quote
           </a>
