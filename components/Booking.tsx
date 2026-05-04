@@ -2,17 +2,17 @@
 
 import { useEffect, useState } from 'react'
 
-const serviceOptions = ['Move-out clean', 'Airbnb turnover', 'Post-renovation', 'Standard deep clean']
-const sizeOptions = ['Studio / 1BR', '2BR', '3BR', '4BR+']
-const timeOptions = ['Within a week', '1 to 2 weeks', 'Flexible']
-const sqftOptions = ['Under 500 sq ft', '500–800 sq ft', '800–1,200 sq ft', 'Over 1,200 sq ft', 'Not sure']
-const districtOptions = ['Hong Kong Island', 'Kowloon', 'New Territories', 'Outlying islands']
+const serviceOptions = ['AC cleaning', 'AC repair', 'AC installation', 'Multi-unit package (3+)']
+const unitOptions = ['1 unit', '2 units', '3 units', '4+ units']
+const timeOptions = ['Today or tomorrow', 'Within the week', 'Flexible']
+const acTypeOptions = ['Split-system (wall-mounted)', 'Window unit', 'Cassette / ceiling', 'Not sure']
+const districtOptions = ['Hong Kong Island', 'Lamma / Outlying Islands', 'Kowloon', 'Other']
 
 const serviceSlugMap: Record<string, string> = {
-  'move-out-clean': 'Move-out clean',
-  'airbnb-turnover': 'Airbnb turnover',
-  'post-renovation': 'Post-renovation',
-  'standard-deep-clean': 'Standard deep clean',
+  'ac-cleaning': 'AC cleaning',
+  'ac-repair': 'AC repair',
+  'ac-installation': 'AC installation',
+  'ac-multi-unit': 'Multi-unit package (3+)',
 }
 
 const isValidEmail = (val: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)
@@ -21,7 +21,7 @@ export default function Booking() {
   const [service, setService] = useState('')
   const [size, setSize] = useState('')
   const [timing, setTiming] = useState('')
-  const [sqft, setSqft] = useState('')
+  const [acType, setAcType] = useState('')
   const [district, setDistrict] = useState('')
   const [notes, setNotes] = useState('')
   const [email, setEmail] = useState('')
@@ -37,7 +37,7 @@ export default function Booking() {
   }, [])
 
   const emailValid = isValidEmail(email)
-  const canSubmit = service && size && timing && sqft && district && emailValid && !sending
+  const canSubmit = service && size && timing && acType && district && emailValid && !sending
 
   const handleSubmit = async () => {
     if (!canSubmit) return
@@ -48,8 +48,8 @@ export default function Booking() {
       'New enquiry from the FreshFlat website.',
       '',
       `Service: ${service}`,
-      `Flat size: ${size}`,
-      `Approximate sq ft: ${sqft}`,
+      `Number of units: ${size}`,
+      `AC type: ${acType}`,
       `District: ${district}`,
       `Timing: ${timing}`,
       ...(notes.trim() ? [`Notes: ${notes.trim()}`] : []),
@@ -66,8 +66,8 @@ export default function Booking() {
           from_name: 'FreshFlat Website',
           email,
           service,
-          flat_size: size,
-          size_sqft: sqft,
+          units: size,
+          ac_type: acType,
           district,
           timing,
           notes: notes.trim(),
@@ -87,7 +87,7 @@ export default function Booking() {
     }
   }
 
-  const fallbackMailto = `mailto:freshflathk@gmail.com?subject=${encodeURIComponent(`FreshFlat Enquiry: ${service}, ${size}, ${district}`)}&body=${encodeURIComponent(`Hi FreshFlat,\n\nI'd like to book the following:\n\nService: ${service}\nFlat size: ${size}\nApproximate sq ft: ${sqft}\nDistrict: ${district}\nTiming: ${timing}${notes.trim() ? `\nNotes: ${notes.trim()}` : ''}\nReply to: ${email}\n\nPlease get back to me with availability and a quote.\n\nThanks.`)}`
+  const fallbackMailto = `mailto:freshflathk@gmail.com?subject=${encodeURIComponent(`FreshFlat Enquiry: ${service}, ${size}, ${district}`)}&body=${encodeURIComponent(`Hi FreshFlat,\n\nI'd like to book the following:\n\nService: ${service}\nNumber of units: ${size}\nAC type: ${acType}\nDistrict: ${district}\nTiming: ${timing}${notes.trim() ? `\nNotes: ${notes.trim()}` : ''}\nReply to: ${email}\n\nPlease get back to me with availability and a quote.\n\nThanks.`)}`
 
   return (
     <section id="booking" className="bg-graphite text-cream relative overflow-hidden reveal">
@@ -100,7 +100,7 @@ export default function Booking() {
               <span className="inline-block w-6 h-px bg-sage-tint align-middle mr-3" />Get a quote
             </p>
             <h2 className="font-display text-section text-cream font-normal">
-              Tell us about<br />your flat<span className="text-sage-tint">.</span>
+              Tell us about<br />your AC<span className="text-sage-tint">.</span>
             </h2>
             <p className="mt-4 text-[13px] text-cream/60 leading-relaxed max-w-[280px]">
               Pick your options and we will get back to you with a confirmed price.
@@ -118,7 +118,7 @@ export default function Booking() {
                 <div className="mb-5">
                   <div className="flex items-baseline gap-3 mb-2.5">
                     <span className="font-display text-sage text-[13px]">01</span>
-                    <p className="font-display text-[15px]">What kind of clean do you need?</p>
+                    <p className="font-display text-[15px]">What do you need?</p>
                   </div>
                   <div className="flex flex-wrap gap-1.5">
                     {serviceOptions.map(opt => (
@@ -133,10 +133,10 @@ export default function Booking() {
                 <div className="mb-5">
                   <div className="flex items-baseline gap-3 mb-2.5">
                     <span className="font-display text-sage text-[13px]">02</span>
-                    <p className="font-display text-[15px]">What size is the flat?</p>
+                    <p className="font-display text-[15px]">How many units?</p>
                   </div>
                   <div className="flex flex-wrap gap-1.5">
-                    {sizeOptions.map(opt => (
+                    {unitOptions.map(opt => (
                       <button key={opt} onClick={() => setSize(opt)}
                         className={`px-3 py-1.5 text-[11px] border transition-colors ${size === opt ? 'bg-graphite text-cream border-graphite' : 'border-rule text-body hover:border-stone'}`}>
                         {opt}
@@ -163,12 +163,12 @@ export default function Booking() {
                 <div className="mb-5">
                   <div className="flex items-baseline gap-3 mb-2.5">
                     <span className="font-display text-sage text-[13px]">04</span>
-                    <p className="font-display text-[15px]">How big is the flat, approximately?</p>
+                    <p className="font-display text-[15px]">What kind of AC unit?</p>
                   </div>
                   <div className="flex flex-wrap gap-1.5">
-                    {sqftOptions.map(opt => (
-                      <button key={opt} onClick={() => setSqft(opt)}
-                        className={`px-3 py-1.5 text-[11px] border transition-colors ${sqft === opt ? 'bg-graphite text-cream border-graphite' : 'border-rule text-body hover:border-stone'}`}>
+                    {acTypeOptions.map(opt => (
+                      <button key={opt} onClick={() => setAcType(opt)}
+                        className={`px-3 py-1.5 text-[11px] border transition-colors ${acType === opt ? 'bg-graphite text-cream border-graphite' : 'border-rule text-body hover:border-stone'}`}>
                         {opt}
                       </button>
                     ))}
@@ -178,7 +178,7 @@ export default function Booking() {
                 <div className="mb-5">
                   <div className="flex items-baseline gap-3 mb-2.5">
                     <span className="font-display text-sage text-[13px]">05</span>
-                    <p className="font-display text-[15px]">Where in Hong Kong is the flat?</p>
+                    <p className="font-display text-[15px]">Where in Hong Kong?</p>
                   </div>
                   <div className="flex flex-wrap gap-1.5">
                     {districtOptions.map(opt => (

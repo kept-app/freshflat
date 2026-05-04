@@ -14,7 +14,7 @@ export default function About() {
 
         <div>
           <p className="text-[14px] text-body leading-relaxed max-w-lg">
-            FreshFlat is a dispatch operator. We connect Hong Kong cleaning crews with customers who need them. We do not own equipment. We do not employ cleaners. We coordinate, communicate, and stand behind the work. The crews we send have been doing this for years. Our job is to make booking them as straightforward as it should have been all along.
+            FreshFlat is a dispatch operator. We connect Hong Kong AC technicians with the people who need them. We do not own equipment. We do not employ technicians. We coordinate, communicate, and stand behind the work. Our job is to make booking AC service as straightforward as it should have been all along.
           </p>
 
           <hr className="border-rule my-6" />

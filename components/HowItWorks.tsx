@@ -1,18 +1,18 @@
 const steps = [
   {
     num: '01',
-    title: 'Tell us about your flat',
-    desc: 'Service type, size, location, and when you need it done. Takes about two minutes.',
+    title: 'Tell us what\'s wrong',
+    desc: 'Service type, number of units, location, and when. Takes about two minutes.',
   },
   {
     num: '02',
-    title: 'Receive an honest quote',
-    desc: 'We quote upfront based on what you tell us. No hidden fees, no surprises. Quote back within the day, often within hours.',
+    title: 'Get a flat quote',
+    desc: 'Transparent pricing upfront. No inspection fees, no surprises. Reply within the hour during service hours.',
   },
   {
     num: '03',
-    title: 'A vetted crew arrives',
-    desc: 'Independent cleaners with their own equipment. The same people landlords already trust.',
+    title: 'A technician arrives',
+    desc: 'English-speaking, fully-equipped, often same-day.',
   },
 ]
 
@@ -29,7 +29,7 @@ export default function HowItWorks() {
             <span className="italic font-light text-sage-deep">That&apos;s it.</span>
           </h2>
           <p className="mt-4 text-[13px] text-body leading-relaxed max-w-[280px]">
-            We removed everything that wastes your time.
+            No inspection fees. No upsells.
           </p>
         </div>
 

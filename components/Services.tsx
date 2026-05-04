@@ -1,8 +1,8 @@
 const services = [
-  { code: 'M-O', slug: 'move-out-clean', title: 'Move-out cleaning', desc: 'End-of-tenancy clean to landlord standard. Inside cabinets, behind appliances, oven, hood, every surface.' },
-  { code: 'A-T', slug: 'airbnb-turnover', title: 'Airbnb turnover', desc: 'Same-day turnovers between guests. Linen change, bathroom reset, kitchen wipe-down. Recurring schedules available.' },
-  { code: 'P-R', slug: 'post-renovation', title: 'Post-renovation', desc: 'The hardest clean there is. Three-pass system: rough, detail, finish. Furniture-ready when we leave.' },
-  { code: 'D-C', slug: 'standard-deep-clean', title: 'Standard deep clean', desc: 'A reset for flats lived in. Top-to-bottom across every room, focused on the surfaces everyone misses.' },
+  { code: 'A-C', slug: 'ac-cleaning', title: 'AC cleaning', desc: 'Full split-system clean. Filters, coils, drain pan, fan blades. Restores cooling and reduces power consumption.' },
+  { code: 'FIX', slug: 'ac-repair', title: 'AC repair', desc: 'Not cooling, leaking, noisy, or won\'t turn on. Flat-rate quote upfront. No inspection fees.' },
+  { code: 'NEW', slug: 'ac-installation', title: 'AC installation', desc: 'New unit installs and replacements. Mounting, piping, electrical. Quoted with the unit cost separate so you know what you\'re paying for.' },
+  { code: '3+', slug: 'ac-multi-unit', title: 'Multi-unit package', desc: 'Whole-flat cleans for 3 or more units. Discounted per-unit rate. Most flats finished in a single visit.' },
 ]
 
 export default function Services() {
@@ -14,7 +14,7 @@ export default function Services() {
             <span className="ff-rule" />Services
           </p>
           <h2 className="font-display text-section font-normal">
-            Four cleans. <span className="italic font-light text-sage-deep">Each done properly.</span>
+            Four services. <span className="italic font-light text-sage-deep">Each priced honestly.</span>
           </h2>
         </div>
 

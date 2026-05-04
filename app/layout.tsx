@@ -3,15 +3,19 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'FreshFlat — Deep Cleaning for Hong Kong Flats',
-  description: 'Move-out cleaning, Airbnb turnovers, post-renovation deep cleans. Vetted independent cleaners dispatched across Hong Kong. Quoted in 90 seconds.',
-  keywords: 'deep cleaning hong kong, move out cleaning hk, airbnb turnover cleaning, post renovation cleaning hong kong',
+  title: 'FreshFlat — AC Service for Hong Kong Flats',
+  description: 'AC cleaning, repair, and installation. Same-day service across Hong Kong, including Sundays. Transparent flat pricing. No inspection fees.',
+  keywords: 'ac cleaning hong kong, ac repair hk, aircon service hong kong, split system cleaning',
   openGraph: {
-    title: 'FreshFlat — Deep Cleaning, Considered',
-    description: 'Vetted independent cleaners for Hong Kong flats. Move-outs, turnovers, post-renovation. Quoted in 90 seconds.',
+    title: 'FreshFlat — AC Service for Hong Kong Flats',
+    description: 'Same-day AC service across Hong Kong. Transparent pricing. English-speaking team.',
     type: 'website',
     locale: 'en_HK',
     siteName: 'FreshFlat',
+  },
+  twitter: {
+    title: 'FreshFlat — AC Service for Hong Kong Flats',
+    description: 'Same-day AC service across Hong Kong. Transparent pricing. English-speaking team.',
   },
 }
 

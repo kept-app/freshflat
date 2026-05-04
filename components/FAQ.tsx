@@ -4,36 +4,36 @@ import { useState } from 'react'
 
 const faqs = [
   {
-    q: 'Are your cleaners insured?',
-    a: 'Yes. Every crew we work with carries their own public liability insurance. We check documentation before the first booking.',
+    q: 'Are your technicians insured?',
+    a: 'Yes. Every technician we dispatch carries their own public liability insurance. We verify documentation before the first job.',
   },
   {
-    q: "What's included in each clean?",
-    a: 'Every service has a detailed scope of work we share before you confirm. Move-out cleans cover every surface including inside cabinets, oven, hood, and behind appliances. Airbnb turnovers focus on guest-visible areas plus linen change. Post-renovation cleans are three-pass: rough debris, detail wipe, final finish.',
+    q: 'Why no inspection fee?',
+    a: 'Most AC problems can be diagnosed by description and a few photos. We give you a flat-rate quote upfront. If a job genuinely needs in-person diagnosis, we tell you before anyone shows up.',
   },
   {
-    q: 'Do I need to provide cleaning supplies?',
-    a: "No. Our crews bring their own professional-grade products and equipment. If you have specific preferences (eco-friendly, fragrance-free), let us know and we can accommodate.",
+    q: 'Do you work on Sundays?',
+    a: 'Yes. Same-day service runs seven days a week, 8am to 9pm.',
   },
   {
     q: 'How does payment work?',
-    a: 'We quote before we begin. Payment is due on completion via FPS, PayMe, or bank transfer. No deposits required for standard bookings.',
+    a: 'Quote upfront, payment on completion. FPS, PayMe, or bank transfer. No deposits for standard bookings.',
   },
   {
     q: 'What areas do you cover?',
-    a: 'All of Hong Kong Island, Kowloon, and most of the New Territories. Remote areas or outlying islands may carry a small surcharge, always disclosed upfront.',
+    a: 'Hong Kong Island, Lamma and the outlying islands, and parts of Kowloon. Outer Kowloon and the New Territories on a case-by-case basis.',
   },
   {
-    q: 'Can I book a recurring schedule?',
-    a: "Yes. Airbnb hosts and property managers often set up recurring turnovers. We can match you with the same crew each time for consistency.",
+    q: 'Can I book recurring AC cleaning?',
+    a: 'Yes. Many residents book twice-yearly cleans before and after summer. Hosts and property managers often book quarterly.',
   },
   {
     q: 'Who runs FreshFlat?',
-    a: 'FreshFlat is an independent dispatch operator working with vetted HK cleaning crews. We focus on coordination, communication, and accountability so the cleaners can focus on the work. We are small. When you message us, you get a real person.',
+    a: 'FreshFlat is an independent dispatch operator working with vetted Hong Kong AC technicians. We coordinate, communicate, and stand behind the work. When you message us, you get a real person.',
   },
   {
-    q: 'What if I am not happy with the clean?',
-    a: 'Tell us within 24 hours and we will send the crew back to fix it at no cost. If we cannot make it right, we do not take payment. We work with the same cleaners repeatedly, so reputation matters more to us than any single job.',
+    q: 'What if the AC breaks again right after?',
+    a: 'If a repair fails within seven days, we send the technician back at no cost. If we cannot fix it, we refund. We work with the same technicians repeatedly, so accountability is built in.',
   },
 ]
 

@@ -8,9 +8,9 @@ export default function Footer() {
               <span className="font-display text-[22px] tracking-tight">FreshFlat</span>
               <span className="text-[9px] tracking-eyebrow uppercase text-stone">Hong Kong</span>
             </div>
-            <p className="font-display italic text-[13px] text-sage-deep mb-3">Hong Kong cleaning, made boring on purpose.</p>
+            <p className="font-display italic text-[13px] text-sage-deep mb-3">AC service for Hong Kong flats. Same-day, transparent, no inspection fees.</p>
             <p className="text-[12px] text-body leading-relaxed max-w-[240px]">
-              Deep cleaning for Hong Kong flats. Vetted independent crews dispatched across the city.
+              AC cleaning, repair, and installation across Hong Kong. Vetted independent technicians dispatched same-day.
             </p>
           </div>
 
@@ -24,7 +24,7 @@ export default function Footer() {
           <div>
             <p className="text-eyebrow tracking-eyebrow uppercase text-stone mb-3">Coverage</p>
             <p className="text-[12px] text-body leading-relaxed">
-              Hong Kong Island<br />Kowloon<br />New Territories
+              Hong Kong Island<br />Lamma &amp; Outlying Islands<br />Kowloon
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export default function Footer() {
         <div className="border-t border-rule mt-7 pt-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-[11px] text-stone">
           <span>&copy; 2026 FreshFlat. Hong Kong.</span>
           <span className="font-display italic">
-            <span className="text-sage">&middot;</span> Booked in minutes. Done properly.
+            <span className="text-sage">&middot;</span> Booked in minutes. Fixed properly.
           </span>
         </div>
       </div>
