@@ -34,7 +34,7 @@ const faqs = [
 ]
 
 export default function FAQ() {
-  const [openIdx, setOpenIdx] = useState<number | null>(0)
+  const [openIdx, setOpenIdx] = useState<number | null>(null)
 
   return (
     <section id="faq" className="border-t border-rule px-6 md:px-10 py-10 md:py-14 max-w-6xl mx-auto reveal">

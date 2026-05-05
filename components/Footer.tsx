@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-rule mt-7 pt-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-[11px] text-stone">
-          <span>&copy; 2026 FreshFlat. Hong Kong.</span>
+          <span>&copy; FreshFlat. Hong Kong.</span>
           <span className="font-display italic">
             <span className="text-sage">&middot;</span> Booked in minutes. Fixed properly.
           </span>

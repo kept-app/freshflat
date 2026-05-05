@@ -6,9 +6,6 @@ export default function Hero() {
 
       <div className="relative z-10 grid md:grid-cols-[2fr_1fr] gap-8 md:gap-10 items-end">
         <div>
-          <p className="text-eyebrow tracking-eyebrow uppercase text-stone mb-5">
-            <span className="ff-rule" />Hong Kong, est. 2026
-          </p>
           <h1 className="font-display text-hero font-normal">
             AC service,<br />
             <span className="italic font-light text-sage-deep">done the way</span> Hong Kong<br />

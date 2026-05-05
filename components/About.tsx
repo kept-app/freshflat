@@ -21,10 +21,6 @@ export default function About() {
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <p className="text-eyebrow tracking-eyebrow uppercase text-stone mb-1.5">Founded</p>
-              <p className="font-display text-[16px]">2026</p>
-            </div>
-            <div>
               <p className="text-eyebrow tracking-eyebrow uppercase text-stone mb-1.5">Based in</p>
               <p className="font-display text-[16px]">Hong Kong</p>
             </div>
