@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'FreshFlat — AC Service for Hong Kong Flats',
-  description: 'AC cleaning, repair, and installation. Same-day service across Hong Kong, including Sundays. Transparent flat pricing. No inspection fees.',
+  description: 'AC cleaning, repair, and installation across Hong Kong Island and Lamma. Same-day service, including Sundays. Transparent flat pricing. No surprise fees.',
   keywords: 'ac cleaning hong kong, ac repair hk, aircon service hong kong, split system cleaning',
   openGraph: {
     title: 'FreshFlat — AC Service for Hong Kong Flats',
