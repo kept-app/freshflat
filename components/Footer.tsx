@@ -23,7 +23,7 @@ export default function Footer() {
           <div>
             <p className="text-eyebrow tracking-eyebrow uppercase text-stone mb-3">Coverage</p>
             <p className="text-[12px] text-body leading-relaxed">
-              Hong Kong Island<br />Lamma
+              Hong Kong Island<br />Kowloon<br />Lamma Island
             </p>
           </div>
 

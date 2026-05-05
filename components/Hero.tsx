@@ -37,7 +37,7 @@ export default function Hero() {
           <hr className="border-rule my-4" />
           <div className="mb-4">
             <p className="text-eyebrow tracking-eyebrow uppercase text-stone mb-1.5">Coverage</p>
-            <p className="text-[12px] text-body">HK Island · Lamma</p>
+            <p className="text-[12px] text-body">HK Island · Kowloon · Lamma Island</p>
           </div>
         </div>
       </div>

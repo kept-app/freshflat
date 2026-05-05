@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: 'What areas do you cover?',
-    a: 'Hong Kong Island and Lamma. Other areas case-by-case — message us with your location and we\'ll tell you honestly whether we can serve you.',
+    a: 'Hong Kong Island, urban Kowloon (TST, Jordan, Yau Ma Tei, Mong Kok, Hung Hom, Ho Man Tin), and Lamma Island. Outside these areas, message us with your location and we\'ll tell you honestly whether we can serve you.',
   },
   {
     q: 'Can I book recurring AC cleaning?',
