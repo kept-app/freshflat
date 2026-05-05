@@ -34,13 +34,13 @@ export default function Hero() {
           <div className="mb-5">
             <p className="text-eyebrow tracking-eyebrow uppercase text-stone mb-1.5">For</p>
             <p className="font-display text-[16px] leading-snug">
-              Residents who need it cleaned.<br />Owners with something broken.<br />Hosts before guests arrive.
+              Before summer hits.<br />When it stops cooling.<br />When you move into a new place.
             </p>
           </div>
           <hr className="border-rule my-4" />
           <div className="mb-4">
             <p className="text-eyebrow tracking-eyebrow uppercase text-stone mb-1.5">Coverage</p>
-            <p className="text-[12px] text-body">HK Island · Lamma · Kowloon</p>
+            <p className="text-[12px] text-body">HK Island · Lamma</p>
           </div>
           <hr className="border-rule my-4" />
           <div>

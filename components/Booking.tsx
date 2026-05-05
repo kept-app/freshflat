@@ -6,7 +6,7 @@ const serviceOptions = ['AC cleaning', 'AC repair', 'AC installation', 'Multi-un
 const unitOptions = ['1 unit', '2 units', '3 units', '4+ units']
 const timeOptions = ['Today or tomorrow', 'Within the week', 'Flexible']
 const acTypeOptions = ['Split-system (wall-mounted)', 'Window unit', 'Cassette / ceiling', 'Not sure']
-const districtOptions = ['Hong Kong Island', 'Lamma / Outlying Islands', 'Kowloon', 'Other']
+const districtOptions = ['Hong Kong Island', 'Lamma', 'Other (we\'ll check)']
 
 const serviceSlugMap: Record<string, string> = {
   'ac-cleaning': 'AC cleaning',

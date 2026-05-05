@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: 'Why no inspection fee?',
-    a: 'Most AC problems can be diagnosed by description and a few photos. We give you a flat-rate quote upfront. If a job genuinely needs in-person diagnosis, we tell you before anyone shows up.',
+    a: 'Most AC problems can be diagnosed by description and a few photos — enough for a flat-rate quote upfront. If a job genuinely needs in-person diagnosis, we tell you first. The diagnostic visit is HK$200, fully deducted from the repair if you proceed.',
   },
   {
     q: 'Do you work on Sundays?',
@@ -21,15 +21,11 @@ const faqs = [
   },
   {
     q: 'What areas do you cover?',
-    a: 'Hong Kong Island, Lamma and the outlying islands, and parts of Kowloon. Outer Kowloon and the New Territories on a case-by-case basis.',
+    a: 'Hong Kong Island and Lamma. Other areas case-by-case — message us with your location and we\'ll tell you honestly whether we can serve you.',
   },
   {
     q: 'Can I book recurring AC cleaning?',
     a: 'Yes. Many residents book twice-yearly cleans before and after summer. Hosts and property managers often book quarterly.',
-  },
-  {
-    q: 'Who runs FreshFlat?',
-    a: 'FreshFlat is an independent dispatch operator working with vetted Hong Kong AC technicians. We coordinate, communicate, and stand behind the work. When you message us, you get a real person.',
   },
   {
     q: 'What if the AC breaks again right after?',
