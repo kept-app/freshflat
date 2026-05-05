@@ -9,15 +9,6 @@ export default function Services() {
   return (
     <section id="services" className="bg-sage-light border-t border-rule px-6 md:px-10 py-10 md:py-14 reveal">
       <div className="max-w-6xl mx-auto">
-        <div className="mb-7">
-          <p className="text-eyebrow tracking-eyebrow uppercase text-stone mb-4">
-            <span className="ff-rule" />Services
-          </p>
-          <h2 className="font-display text-section font-normal">
-            Four services. <span className="italic font-light text-sage-deep">Each priced honestly.</span>
-          </h2>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-px bg-rule">
           {services.map((s) => (
             <div key={s.code} className="bg-cream p-5 md:p-6 flex flex-col">

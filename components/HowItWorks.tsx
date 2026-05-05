@@ -12,7 +12,7 @@ const steps = [
   {
     num: '03',
     title: 'A technician arrives',
-    desc: 'English-speaking, fully-equipped, often same-day.',
+    desc: 'Often same-day.',
   },
 ]
 
@@ -28,9 +28,6 @@ export default function HowItWorks() {
             Three steps.<br />
             <span className="italic font-light text-sage-deep">That&apos;s it.</span>
           </h2>
-          <p className="mt-4 text-[13px] text-body leading-relaxed max-w-[280px]">
-            No inspection fees. No upsells.
-          </p>
         </div>
 
         <div className="border-t border-b border-rule">

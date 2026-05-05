@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: 'Can I book recurring AC cleaning?',
-    a: 'Yes. Many residents book twice-yearly cleans before and after summer. Hosts and property managers often book quarterly.',
+    a: 'Yes. Many customers book before each summer to keep their units running well.',
   },
   {
     q: 'What if the AC breaks again right after?',

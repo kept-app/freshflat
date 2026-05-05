@@ -12,10 +12,10 @@ export default function Hero() {
             needs it.
           </h1>
           <p className="mt-4 font-display text-[clamp(16px,2vw,21px)] font-normal text-graphite/60 leading-snug">
-            Same-day. Including Sundays. No inspection fees.
+            Done properly. Same-day if you need it.
           </p>
           <p className="mt-5 text-[15px] md:text-base leading-relaxed text-body max-w-lg">
-            AC cleaning, repair, and installation. Transparent flat pricing quoted upfront. English-speaking team across Hong Kong Island, Lamma, and Kowloon.
+            AC cleaning, repair, and installation. Transparent flat pricing quoted upfront.
           </p>
           <div className="mt-7 flex flex-wrap gap-4 items-center">
             <a href="#booking" className="inline-flex items-center gap-2 bg-graphite text-cream px-5 py-3 text-[12px] tracking-btn uppercase hover:bg-sage-deep transition-colors">
@@ -38,11 +38,6 @@ export default function Hero() {
           <div className="mb-4">
             <p className="text-eyebrow tracking-eyebrow uppercase text-stone mb-1.5">Coverage</p>
             <p className="text-[12px] text-body">HK Island · Lamma</p>
-          </div>
-          <hr className="border-rule my-4" />
-          <div>
-            <p className="text-eyebrow tracking-eyebrow uppercase text-stone mb-1.5">Quote in</p>
-            <p className="font-display text-[26px]">90 seconds<span className="text-sage">.</span></p>
           </div>
         </div>
       </div>
