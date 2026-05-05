@@ -17,14 +17,6 @@ export default function About() {
             FreshFlat is a dispatch operator. We connect Hong Kong AC technicians with the people who need them. We do not own equipment. We do not employ technicians. We coordinate, communicate, and stand behind the work. Our job is to make booking AC service as straightforward as it should have been all along.
           </p>
 
-          <hr className="border-rule my-6" />
-
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <p className="text-eyebrow tracking-eyebrow uppercase text-stone mb-1.5">Based in</p>
-              <p className="font-display text-[16px]">Hong Kong</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
